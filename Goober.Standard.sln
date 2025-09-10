@@ -1,17 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29806.167
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goober.Core", "Goober.Core\Goober.Core.csproj", "{DAF9822F-63F5-46F8-86AD-02248C50B308}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goober.Base", "Goober.Base\Goober.Base.csproj", "{C54C2B3D-F0FD-2286-DC22-76EF04A5BC65}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goober.Http", "Goober.Http\Goober.Http.csproj", "{725A52CC-7B2D-46CA-BC91-8986E35E17B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goober.Caching", "Goober.Caching\Goober.Caching.csproj", "{7E86F158-ED71-B338-2CE6-4C1B1FAFBCF7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goober.Caching.Abstractions", "Goober.Caching.Abstractions\Goober.Caching.Abstractions.csproj", "{44720B53-7A42-474F-81F4-8BA9C65A0F5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goober.Caching.Abstractions", "Goober.Caching.Abstractions\Goober.Caching.Abstractions.csproj", "{9ED7071B-38D3-124E-071F-14770A3597D5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goober.Caching", "Goober.Caching\Goober.Caching.csproj", "{399BCD84-8E53-45AC-BF7C-93BF3E4D5F5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goober.DependencyInjection", "Goober.DependencyInjection\Goober.DependencyInjection.csproj", "{03188609-B653-CF38-644B-985CB90DF877}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goober.Http.Abstractions", "Goober.Http.Abstractions\Goober.Http.Abstractions.csproj", "{8593F99E-E47F-4044-A499-CC40C5438920}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goober.Http", "Goober.Http\Goober.Http.csproj", "{04DBFD2B-28F5-FE71-8543-E87CC30EADD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goober.Http.Abstractions", "Goober.Http.Abstractions\Goober.Http.Abstractions.csproj", "{569745BE-FB1E-CD5F-3D07-56BA99922F0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goober.Standard.Tests", "Goober.Standard.Tests\Goober.Standard.Tests.csproj", "{DFDD3580-FC4D-E0F0-4896-18E0BD22C709}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,26 +23,34 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DAF9822F-63F5-46F8-86AD-02248C50B308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DAF9822F-63F5-46F8-86AD-02248C50B308}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DAF9822F-63F5-46F8-86AD-02248C50B308}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DAF9822F-63F5-46F8-86AD-02248C50B308}.Release|Any CPU.Build.0 = Release|Any CPU
-		{725A52CC-7B2D-46CA-BC91-8986E35E17B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{725A52CC-7B2D-46CA-BC91-8986E35E17B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{725A52CC-7B2D-46CA-BC91-8986E35E17B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{725A52CC-7B2D-46CA-BC91-8986E35E17B4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44720B53-7A42-474F-81F4-8BA9C65A0F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44720B53-7A42-474F-81F4-8BA9C65A0F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44720B53-7A42-474F-81F4-8BA9C65A0F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44720B53-7A42-474F-81F4-8BA9C65A0F5F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{399BCD84-8E53-45AC-BF7C-93BF3E4D5F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{399BCD84-8E53-45AC-BF7C-93BF3E4D5F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{399BCD84-8E53-45AC-BF7C-93BF3E4D5F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{399BCD84-8E53-45AC-BF7C-93BF3E4D5F5D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8593F99E-E47F-4044-A499-CC40C5438920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8593F99E-E47F-4044-A499-CC40C5438920}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8593F99E-E47F-4044-A499-CC40C5438920}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8593F99E-E47F-4044-A499-CC40C5438920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C54C2B3D-F0FD-2286-DC22-76EF04A5BC65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54C2B3D-F0FD-2286-DC22-76EF04A5BC65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54C2B3D-F0FD-2286-DC22-76EF04A5BC65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54C2B3D-F0FD-2286-DC22-76EF04A5BC65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E86F158-ED71-B338-2CE6-4C1B1FAFBCF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E86F158-ED71-B338-2CE6-4C1B1FAFBCF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E86F158-ED71-B338-2CE6-4C1B1FAFBCF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E86F158-ED71-B338-2CE6-4C1B1FAFBCF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED7071B-38D3-124E-071F-14770A3597D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED7071B-38D3-124E-071F-14770A3597D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED7071B-38D3-124E-071F-14770A3597D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED7071B-38D3-124E-071F-14770A3597D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03188609-B653-CF38-644B-985CB90DF877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03188609-B653-CF38-644B-985CB90DF877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03188609-B653-CF38-644B-985CB90DF877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03188609-B653-CF38-644B-985CB90DF877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04DBFD2B-28F5-FE71-8543-E87CC30EADD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04DBFD2B-28F5-FE71-8543-E87CC30EADD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04DBFD2B-28F5-FE71-8543-E87CC30EADD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04DBFD2B-28F5-FE71-8543-E87CC30EADD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569745BE-FB1E-CD5F-3D07-56BA99922F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569745BE-FB1E-CD5F-3D07-56BA99922F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569745BE-FB1E-CD5F-3D07-56BA99922F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569745BE-FB1E-CD5F-3D07-56BA99922F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFDD3580-FC4D-E0F0-4896-18E0BD22C709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFDD3580-FC4D-E0F0-4896-18E0BD22C709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFDD3580-FC4D-E0F0-4896-18E0BD22C709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFDD3580-FC4D-E0F0-4896-18E0BD22C709}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,7 @@ namespace Goober.Caching
 {
     public static class ServiceCollectionExtensions
     {
-        public static void AddGooberCaching(this IServiceCollection services, long? memoryCacheSizeLimitInBytes)
+        public static void AddIndusoftCaching(this IServiceCollection services, long? memoryCacheSizeLimitInBytes)
         {
             services.AddMemoryCache((options) => { options.SizeLimit = memoryCacheSizeLimitInBytes; });
             services.AddSingleton<ICacheProvider, CacheProvider>();

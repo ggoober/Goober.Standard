@@ -1,4 +1,6 @@
-﻿using Goober.Http.Services;
+﻿using System;
+using Goober.Http.Models;
+using Goober.Http.Services;
 using Goober.Http.Services.Implementation;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -6,7 +8,7 @@ namespace Goober.Http
 {
     public static class ServiceCollectionExtensions
     {
-        public static void AddGooberHttp(this IServiceCollection services)
+        public static void AddIndusoftHttp(this IServiceCollection services)
         {
             services.AddHttpClient();
             services.AddScoped<IHttpJsonHelperService, HttpJsonHelperService>();
