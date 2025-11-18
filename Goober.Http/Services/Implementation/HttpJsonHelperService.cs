@@ -1337,6 +1337,7 @@ namespace Goober.Http.Services.Implementation
             }
 
             var exception = new WebException(generalErrorMessage);
+            exception.Data.Add("StatusCode", httpResponse.StatusCode);
 
             if (isReadToTheEnd == false)
             {
